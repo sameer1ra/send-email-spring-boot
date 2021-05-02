@@ -19,7 +19,7 @@ public class ServiceImpl {
 	@Autowired
 	DataModel dataModel;
 
-	public String checkForAvailability() {
+	public boolean checkForAvailability() {
 
 		Map<String, Set<String>> searchData = dataModel.getSearchData();
 		boolean vaccineAvailable18=false;
@@ -54,7 +54,7 @@ public class ServiceImpl {
 			if(dataModel.isAge45() && vaccineAvailable45)
 				mailSender.sendEmail(pincode, res.toString());
 		}
-		return "";
+		return vaccineAvailable18;
 	}
 
 }

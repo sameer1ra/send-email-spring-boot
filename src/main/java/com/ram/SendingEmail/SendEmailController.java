@@ -32,7 +32,7 @@ public class SendEmailController {
 	}
 	
 	@GetMapping(value = "/check")
-	public String checkAvailability() {
+	public boolean checkAvailability() {
 		return service.checkForAvailability();
 	}
 	

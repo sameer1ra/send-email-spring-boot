@@ -10,7 +10,7 @@ public class Scheduler {
 	@Autowired
 	ServiceImpl serviceImpl;
 	
-	@Scheduled(fixedRate = 60000*30)
+	@Scheduled(fixedRate = 60000*5)
 	public void fixedRateSch() {
 		
 		serviceImpl.checkForAvailability();
